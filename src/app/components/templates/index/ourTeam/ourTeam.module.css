@@ -1,0 +1,182 @@
+.innerImage {
+    overflow: hidden;
+}
+
+.innerImage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: 0.7s;
+  transform: perspective(400px) rotateX(-10deg);
+  transform-origin: top;
+  z-index: 1;
+}
+
+.wrapper:hover .innerImage::before {
+    transform: scale(1.05) rotate(0deg);
+}
+
+.innerImage img {
+  width: 100%;
+  transform: scaleX(1);
+  transition: transform 1s ease-in-out;
+}
+
+.wrapper:hover .innerImage:before {
+  opacity: 0.5;
+  transform: perspective(400px) rotateX(0deg);
+}
+
+.singleIcon {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 5;
+}
+
+.iconShare {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  background: var(--dark-color);
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.iconShare svg {
+  color: #fff;
+}
+
+.iconShare::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--primary-color);
+  border-radius: 0;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: all 0.4s linear;
+  z-index: -1;
+}
+
+.iconShare:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.socialinnerlink {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  line-height: 0;
+  transform: scaleY(0);
+  transform: translateY(-50%);
+  overflow: hidden;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
+  transform-origin: bottom center;
+}
+
+.singleIcon:hover  .socialinnerlink li a {
+  opacity: 1;
+  transform: perspective(400px) rotateY(0deg) translateY(0);
+  transition-delay: .2s;
+}
+
+.socialinnerlink li {
+    position: relative;
+    display: block;
+    margin-right: 2px;
+}
+
+
+.socialinnerlink li a {
+    opacity: 0;
+    transform: perspective(400px) rotateY(0deg) translateY(80px);
+    transform-origin: bottom;
+    transition: all .3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-dark);
+    border-radius: 0;
+    z-index: 1;
+}
+
+
+.socialinnerlink li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--primary-color);
+    border-radius: 0;
+    transform: scale(.5);
+    opacity: 0;
+    transition: all .4s linear;
+    z-index: -1;
+}
+
+
+.socialinnerlink li a svg {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: 23px;
+    line-height: 15px;
+    font-weight: 400;
+    transition: all .2s linear;
+    transition-delay: .1s;
+}
+
+.iconShare:hover  .socialinnerlink{
+  
+   opacity: 1;
+    transform: scaleY(1, -50%);
+    transition-delay: .1s;
+}
+
+
+.iconShare:hover .socialinnerlink li a {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0deg) translateY(0);
+    transition-delay: .2s;
+}
+
+
+.wrapper:hover  .innerImage img{
+transform: scale(1.05) rotate(0deg);
+}
+
+
+.socialinnerlink li a:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+
+

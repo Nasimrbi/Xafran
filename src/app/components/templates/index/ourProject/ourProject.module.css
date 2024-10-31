@@ -1,0 +1,159 @@
+.innerProject {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.innerProject::before {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    bottom: 20px;
+    right: 15px;
+    background: rgba(17,22,31, .9);
+    transform: perspective(400px) rotateX(90deg) scaleY(.5);
+    transform-origin: center;
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transition-property: all;
+    content: "";
+    z-index: 1;
+}
+
+.projectWrapper {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+}
+
+@media (max-width : 992px) {
+    .projectWrapper {
+        margin-bottom: 0px;
+    }
+}
+
+.projectWrapper:hover .innerProject::before {
+    transform: perspective(400px) rotateX(0deg) scaleY(1);
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .7s;
+    transition-property: all;
+}
+
+.overlayBtns {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all .8s ease;
+    z-index: 5;
+}
+
+.overlayBtns a  {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--secoundry-color);
+    color: #000;
+    z-index: 1;
+}
+
+
+
+
+.overlayBtns a:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+.overlayBtns  a svg {
+    color: black;
+}
+
+
+.overlayBtns a:hover  svg {
+    color: #fff !important;
+}
+
+.overlayBtns a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+    background: var(--primary-color);
+    transform: scale(.5);
+    opacity: 0;
+    transition: all .3s linear;
+    transition-delay: .1s;
+    content: "";
+    z-index: -1;
+}
+
+.innerProject img {
+    transition: .7s ease;
+}
+
+.innerProject:hover  .innerProject img {
+    transform: scale(1.08);
+}
+
+
+.overlayText {
+    position: absolute;
+    left: 55px;
+    bottom: 55px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all .8s ease;
+    z-index: 5;
+}
+
+.innerProject:hover  .overlayText { 
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: .5s;
+}
+
+.innerProject:hover .overlayBtns {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: .5s;
+}
+
+
+.overlayText p {
+    color: #abafb5;
+    text-transform: capitalize;
+}
+
+
+.overlayText h2 {
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+
+.overlayText h2 a:hover {
+    color: var(--primary-color);
+}
+
+

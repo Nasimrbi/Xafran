@@ -1,0 +1,25 @@
+.bgHeadr {
+    background-image: url(../../../../../assets/page-header-bg.jpg);
+    background-blend-mode: luminosity;
+    background-attachment: scroll;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: relative;
+}
+
+.bgHeadr:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    background: #000d24;
+    opacity: .75;
+    z-index: -2;
+    content: "";
+}
+
+

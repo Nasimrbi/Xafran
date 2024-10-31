@@ -1,0 +1,121 @@
+
+.footerParagraph {
+    color: #abafb5;
+}
+
+.footerheading {
+    color: #fff;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: -.016em;
+}
+
+.bgdark {
+    background-color: var(--dark-color);
+}
+
+.newsletterInput {
+    padding-left: 30px;
+    padding-right: 65px;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #ddd;
+    z-index: 1;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    height: 60px;
+    width: 100%;
+}
+
+.newsletterbtn {
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+.newsletterbtn:hover {
+    background-color: var(--dark-color);
+    color: #fff;
+}
+
+.copyright {
+    color: #abafb5;
+}
+
+.mainCopyright{
+    color: var(--primary-color);
+}
+
+.footerPhone {
+    color: var(--primary-color);
+}
+
+
+.footerSocialLinks:hover {
+    transform: scaleX(1) rotateX(0deg) !important;
+    transition: all .4s linear !important;
+    opacity: 1 !important;
+    color: #fff !important;
+}
+
+.footerSocialLinks::before {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    right: 0;
+    height: 1px;
+    background-color: #fff;
+    transform: scaleX(.8) rotateX(0deg);
+    transition: all .4s linear;
+    opacity: 0;
+    content: "";
+}
+
+.footerSocialLinks:hover::before {
+    transform: scaleX(1) rotateX(0deg) !important;
+    transition: all .4s linear !important;
+    opacity: 1 !important;
+}
+
+.footerItems li:hover {
+    color: var(--primary-color);
+    padding-left: 15px;
+}
+
+.footerItems li {
+    transition: all .3s ease-out 0s;
+}
+
+.pusIcon {
+    display: none;
+    color: var(--primary-color) !important;
+}
+
+.footerItems li:hover:before   {
+    display: block !important;
+}
+ 
+.footer .shape1 {
+        position: absolute;
+        top: 155px;
+        right: 0;
+        opacity: .08;
+}
+
+

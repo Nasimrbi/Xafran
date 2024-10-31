@@ -1,0 +1,17 @@
+.featureImage {
+    border-radius: 30px;
+    border: 13px solid var(--dark-color);
+    position: relative;
+    left: -30px;
+}
+
+.shape1 {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    z-index: -1;
+}
+
+.features p {
+    padding-right: 52px;
+}

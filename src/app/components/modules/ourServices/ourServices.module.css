@@ -1,0 +1,159 @@
+.servicebox {
+    background-color: transparent;
+    position: relative;
+    display: block;
+    padding: 52px 60px 50px;
+    margin-bottom: 30px;
+    /* overflow: hidden; */
+    z-index: 0;
+}
+
+.servicebox:before {
+    transform: scaleX(.8) rotateX(0deg);
+    transition: all .4s linear;
+    border: 1px solid var(--thm-primary);
+    border-radius: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+
+.shape {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 1.2s ease;
+    transform: translateX(80px);
+    z-index: -1;
+}
+
+.servicebox:hover .shape {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: .3s;
+}
+
+.servicebox:hover::before {
+    transform: scaleX(1) rotateX(0deg);
+    transition: all .4s linear;
+    opacity: 1;
+    border: 1px solid var(--primary-color);
+    border-radius: 0;
+    z-index: 1;
+}
+
+.iconbox svg {
+    font-size: 65px;
+    line-height: 65px;
+    transition: all .6s linear;
+    transition-delay: .1s;
+}
+
+.servicebox:hover .iconbox svg {
+    transform: scale(.9);
+    color: var(--primary-color);
+}
+
+.serviceInner {
+    position: relative;
+    z-index: 5;
+}
+
+
+.iconbox {
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+
+.servicebox .iconbox svg {
+    color: var(--secoundry-color);
+}
+
+.servicebox:hover .iconbox svg {
+    transform: scale(.9);
+    color: var(--primary-color);
+}
+
+
+.btnbox a {
+    color: var(--secoundry-color);
+}
+
+.btnbox:hover a {
+    color: var(--primary-color);
+}
+
+
+.counttext {
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    color: #202835;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: .018em;
+    transform: rotate(180deg) translateX(0);
+    width: max-content;
+    writing-mode: vertical-rl;
+    -webkit-text-orientation: mixed;
+    text-orientation: mixed;
+}
+
+
+@media (max-width : 992px) {
+    .counttext {
+        display: none;
+    }
+
+    .servicebox {
+        padding: 5px;
+    }
+}
+
+.servicebox::after , .servicebox::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: "";
+}
+
+.servicebox::after {
+    border: 1px solid #242b39;
+}
+
+.servicebox::before {
+    transform: scaleX(.8) rotateX(0deg);
+    transition: all .4s linear;
+    border: 1px solid var(--primary-color);
+    border-radius: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.servicebox:hover .contentbox h2 {
+  color: var(--primary-color);
+}    
+
+
+.animImage {
+    background-image: url(../../../public/assets/images/service-v1-shape2.png);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-position: 50%;
+    background-repeat: repeat-x;
+    min-height: 12px;
+    /* z-index: 1; */
+}
+
+@media (max-width : 992px) {
+    .serviceInner {
+        gap: 78px !important;
+    }
+}

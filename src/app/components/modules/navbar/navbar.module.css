@@ -1,0 +1,43 @@
+
+.menulink.active {
+    color: var(--primary-color);
+}
+
+.menulink.active:after {
+    transform: scale(1);
+    transform-origin: left center;
+}
+
+
+.menulink:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 0;
+    transition: transform .7s ease;
+    transform: scaleX(0);
+    transform-origin: left center;
+    content: "";
+} 
+
+
+.menulink:hover:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 0;
+    transition: transform .7s ease;
+    transform: scaleX(0);
+    transform-origin: left center;
+    content: "";
+} 
+
+
+
+

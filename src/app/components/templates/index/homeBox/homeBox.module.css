@@ -1,0 +1,88 @@
+.feautureonesingle {
+   background-color: var(--gray-bg);
+   padding: 31px 40px 40px;
+   position: relative;
+}
+
+.feautureonesingle:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--dark-color);
+    transition: transform .4s ease;
+    transform-origin: top right;
+    transform: scaleY(0);
+}
+
+.feautureonesingle:hover:before {
+    transform: scale(1);
+    transform-origin: bottom center;
+}
+
+.feautureonesingle:hover .feautureonesingletext p {
+    color: #848484 !important;
+    z-index: 99;
+    position: relative;
+}
+
+.feautureonesingle:hover .feautureonesingletext h2 a{
+    color: #fff !important;
+    z-index: 99;
+    position: relative;
+}
+
+.feautureonesingletext p {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .016em;
+    transition: all .2s linear;
+    transition-delay: .1s;
+    color: var(--gray-color);
+}
+
+
+.feautureonesinglebottom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.btnbox {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    transition: all .2s linear;
+    transition-delay: .1s;
+    background-color: #fff;
+}
+
+.btnbox a svg {
+    color: #000;
+    transition: all .2s linear;
+    transition-delay: .1s;
+}
+
+
+.featursIcon {
+    color: var(--primary-color);
+}
+
+.feautureonesingle:hover .feautureonesinglebottom .iconBox .featursIcon {
+    color: #fff !important;
+}
+
+.feautureonesingle:hover .feautureonesinglebottom  .btnbox  {
+    background-color: var(--primary-color);
+}
+
+.feautureonesingle:hover .feautureonesinglebottom  .btnbox a svg {
+    color: #fff !important;
+}

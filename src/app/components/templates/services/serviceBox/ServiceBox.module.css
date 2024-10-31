@@ -1,0 +1,108 @@
+.serviceSingle {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 60px 0 rgba(21, 24, 32, .06);
+    padding: 60px 20px 60px 60px;
+    margin-bottom: 30px;
+    z-index: 1;
+}
+
+@media (max-width: 992px) {
+    .serviceSingle {
+        padding: 20px !important;
+    }
+}
+
+.serviceSingle .shape2 {
+    position: absolute;
+    top: 0;
+    right: -101%;
+    transition: all .7s ease;
+    opacity: 0;
+}
+
+.serviceSingle:hover .shape2 {
+    right: 0;
+    opacity: 1;
+}
+
+.serviceSingle .bg {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -101%;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all .6s ease;
+    opacity: 0;
+    z-index: -1;
+    background-image: url(../../../../public/assets/images/service-v2-single-bg.jpg);
+}
+
+.bg::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--dark-color);
+    opacity: .9;
+    content: "";
+}
+
+.serviceSingle:hover .bg {
+    left: 0;
+    opacity: 1;
+}
+
+.serviceSingle::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    background: #000;
+    content: "";
+}
+
+
+.serviceSingle h2 {
+    color: #000;
+    transition: all .2s linear;
+    transition-delay: .1s;
+}
+
+.serviceSingle:hover  h2 {
+    color: #fff;
+}
+
+.serviceSingle:hover a {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color) ;
+  color: #fff;
+}
+
+.serviceSingle p {
+    transition: all .2s linear;
+    transition-delay: .1s;
+}
+
+
+.serviceSingle a {
+    color: #000;
+    font-size: 14px;
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: .018em;
+    text-transform: uppercase;
+    border: 1px solid #dcdcdc;
+    padding: 20px 20px;
+    transition: all .2s linear;
+    transition-delay: .1s;
+}
+
+

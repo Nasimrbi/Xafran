@@ -1,0 +1,49 @@
+.faqSec {
+    position: relative;
+    padding: 120px 0 0px;
+    overflow: hidden;
+    /* z-index: 1; */
+    display: flex;
+    gap: 5px;
+}
+
+
+
+
+.shape1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: .8;
+    z-index: -1;
+}
+
+.faqOneInner {
+    position: relative;
+}
+
+
+.bigTitle {
+    position: absolute;
+    left: -279px;
+    transform: rotate(180deg) translateX(0);
+    width: max-content;
+    writing-mode: vertical-rl;
+    -webkit-text-orientation: mixed;
+    text-orientation: mixed;
+}
+
+.bigTitle h2 {
+    color: #eaeaea;
+    font-size: 200px;
+    line-height: .9em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.faqGroup {
+    position: relative;
+    display: block;
+    max-width: 870px;
+    width: 100%;
+}

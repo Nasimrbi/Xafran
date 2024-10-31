@@ -1,0 +1,27 @@
+.socialIcons {
+    color: #fff;
+    transition: all .3s ease-out 0s;
+}
+
+.topbarPhone a {
+    color: #fff !important;
+}
+
+.email  a {
+    color: #fff !important;
+}
+
+
+ .socialIcons:hover {
+    color: var(--primary-color) !important;
+}
+
+
+ .phoneLink:hover {
+    color: var(--primary-color) !important;
+}
+
+
+ .emailLink:hover {
+    color: var(--primary-color) !important;
+}
